@@ -1,0 +1,143 @@
+{
+  "Vehicle": {
+    "description": "General vehicle build, exterior styling, chassis, handling, body, and overall design",
+    "keywords": [
+      "vehicle", "car", "automobile", "auto", "suv", "sedan", "hatchback", "truck",
+      "build quality", "body", "styling", "design", "exterior", "looks", "chassis",
+      "handling", "maneuverability", "aerodynamics", "fit and finish", "paint",
+      "appearance", "platform", "doors", "trunk", "boot space", "ground clearance",
+      "curb appeal", "frame", "wheelbase", "driving dynamics"
+    ],
+    "patterns": [
+      "\\b(build\\s+quality|fit\\s+(?:and|&)\\s+finish)\\b",
+      "\\b(ground\\s+clearance|boot\\s+space|trunk\\s+space)\\b",
+      "\\b(exterior\\s+styling|overall\\s+design|driving\\s+dynamics)\\b",
+      "\\b(body\\s+roll|handling\\s+(?:dynamics|performance)?)\\b"
+    ]
+  },
+  "Engine": {
+    "description": "Powertrain, engine performance, horsepower, torque, acceleration, and transmission",
+    "keywords": [
+      "engine power", "engine performance", "engine", "motor", "horsepower", "hp", "torque", "acceleration", "power",
+      "powertrain", "transmission", "gearbox", "gear", "gears", "turbo", "turbocharger",
+      "v6", "v8", "cylinder", "cylinders", "throttle", "throttle response", "exhaust",
+      "drivetrain", "shifting", "shift", "automatic transmission", "manual transmission",
+      "dual clutch", "cvt", "revs", "rpm", "0-60", "pickup"
+    ],
+    "patterns": [
+      "\\b(engine\\s+(?:power|performance|sound|noise|response)?)\\b",
+      "\\b(gear\\s+shift(?:ing)?|throttle\\s+response|0\\s*-\\s*60)\\b",
+      "\\b(transmission|gearbox|horsepower|torque|acceleration)\\b",
+      "\\b(turbo(?:charger)?|powertrain|v6|v8|cylinder)\\b"
+    ]
+  },
+  "Battery": {
+    "description": "EV battery, electric driving range, charging speed, kWh capacity, and battery health",
+    "keywords": [
+      "battery range", "charging time", "charging speed", "charge time", "battery", "range", "ev range",
+      "charging", "charger", "fast charging", "supercharger",
+      "kwh", "kilowatt", "battery pack", "battery life", "battery degradation",
+      "electric range", "level 2 charging", "wallbox", "dc fast charging", "state of charge",
+      "soc", "regenerative braking", "regen"
+    ],
+    "patterns": [
+      "\\b(battery\\s+(?:range|life|pack|capacity|health|degradation))\\b",
+      "\\b(charging\\s+(?:time|speed|station|rate|network))\\b",
+      "\\b(ev\\s+range|electric\\s+range|fast\\s+charg(?:ing|er))\\b",
+      "\\b(supercharger|kwh|wallbox|charge\\s+time)\\b"
+    ]
+  },
+  "Mileage": {
+    "description": "Fuel economy, fuel efficiency, MPG, KMPL, and energy consumption",
+    "keywords": [
+      "gas mileage", "fuel economy", "fuel efficiency", "mileage", "mpg", "kmpl",
+      "efficiency", "fuel consumption", "gas consumption", "per gallon", "consumption",
+      "fuel tank", "energy efficiency", "mpge", "litres per 100km", "range efficiency",
+      "fuel usage", "economic on gas", "drinks fuel", "gas guzzler"
+    ],
+    "patterns": [
+      "\\b(fuel\\s+(?:economy|efficiency|consumption|usage))\\b",
+      "\\b(gas\\s+mileage|gas\\s+consumption|miles\\s+per\\s+gallon)\\b",
+      "\\b(mileage|mpg|kmpl|mpge)\\b",
+      "\\b(gas\\s+guzzler|fuel\\s+efficient|energy\\s+efficiency)\\b"
+    ]
+  },
+  "Safety": {
+    "description": "Safety features, crash ratings, ADAS, brakes, driver assistance, and passenger protection",
+    "keywords": [
+      "safety features", "safety assist", "safety", "airbag", "airbags", "crash test", "ncap", "adas", "brake", "brakes",
+      "braking", "abs", "esp", "traction control", "lane keep", "lane assist",
+      "blind spot", "collision", "collision warning", "emergency braking", "cruise control",
+      "adaptive cruise", "seatbelts", "cameras", "parking sensors", "safety rating",
+      "lane departure", "stability control"
+    ],
+    "patterns": [
+      "\\b(safety\\s+(?:rating|features|system|assist)?)\\b",
+      "\\b(crash\\s+test|ncap|airbag(?:s)?|adas)\\b",
+      "\\b(emergency\\s+braking|blind\\s+spot|lane\\s+(?:keep|assist|departure))\\b",
+      "\\b(braking\\s+(?:distance|performance)?|brake(?:s)?|adaptive\\s+cruise)\\b"
+    ]
+  },
+  "Comfort": {
+    "description": "Seating, suspension, ride quality, cabin quietness, legroom, headroom, and HVAC",
+    "keywords": [
+      "ride quality", "seating comfort", "road noise", "comfort", "comfortable", "seating", "seat", "seats", "legroom", "headroom",
+      "suspension", "cabin", "quiet", "noise insulation",
+      "bumps", "lumbar", "lumbar support", "ac", "air conditioning", "heater", "hvac",
+      "climate control", "cushioning", "smooth ride", "plush", "spacious", "cramped",
+      "harsh ride", "stiff suspension", "ventilation", "heated seats"
+    ],
+    "patterns": [
+      "\\b(ride\\s+quality|road\\s+noise|cabin\\s+insulation|noise\\s+level)\\b",
+      "\\b(comfort(?:able)?|seating\\s+comfort|legroom|headroom|spacious(?:ness)?)\\b",
+      "\\b(suspension|smooth\\s+ride|lumbar\\s+support|climate\\s+control|air\\s+conditioning)\\b",
+      "\\b(heated\\s+seats|ventilated\\s+seats|stiff\\s+suspension|harsh\\s+ride)\\b"
+    ]
+  },
+  "Service": {
+    "description": "Dealership experience, maintenance, warranty, repairs, customer support, and spare parts",
+    "keywords": [
+      "customer service", "customer support", "dealership", "service center", "service", "servicing", "dealer", "warranty",
+      "maintenance", "repair", "repairs", "recall", "mechanic", "technician", "support",
+      "spare parts", "after sales", "after-sales", "scheduled maintenance",
+      "service cost", "dealership staff"
+    ],
+    "patterns": [
+      "\\b(customer\\s+(?:service|support)|after\\s*[-]?\\s*sales)\\b",
+      "\\b(dealership(?:\\s+experience|\\s+staff)?|dealer\\s+network)\\b",
+      "\\b(service\\s+(?:center|cost|quality|interval)?|scheduled\\s+maintenance)\\b",
+      "\\b(warranty(?:\\s+coverage|\\s+claim)?|spare\\s+parts|repair(?:s)?)\\b"
+    ]
+  },
+  "Infotainment": {
+    "description": "Touchscreen, navigation, audio sound system, Apple CarPlay, Android Auto, and software UI",
+    "keywords": [
+      "infotainment system", "infotainment", "touchscreen", "display", "screen", "audio", "sound system",
+      "speakers", "apple carplay", "android auto", "bluetooth", "navigation", "gps",
+      "voice control", "radio", "software", "ui", "user interface", "stereo",
+      "digital cluster", "heads up display", "hud", "subwoofer", "connectivity",
+      "ota update", "wireless carplay"
+    ],
+    "patterns": [
+      "\\b(infotainment(?:\\s+system)?|touchscreen(?:\\s+display)?)\\b",
+      "\\b(apple\\s+carplay|android\\s+auto|sound\\s+system|audio\\s+system)\\b",
+      "\\b(navigation(?:\\s+system)?|gps|voice\\s+(?:control|command))\\b",
+      "\\b(digital\\s+(?:cluster|instrument|dashboard)|bluetooth|connectivity)\\b"
+    ]
+  },
+  "Price": {
+    "description": "Pricing, value for money, MSRP, affordability, discounts, and resale value",
+    "keywords": [
+      "value for money", "purchase price", "pricing", "price", "cost", "expensive", "cheap", "affordable",
+      "msrp", "discount", "resale value", "financing", "sticker price", "depreciation",
+      "pocket friendly", "overpriced", "bargain", "worth the money", "total cost of ownership",
+      "maintenance expense", "deal", "budget"
+    ],
+    "patterns": [
+      "\\b(value\\s+for\\s+money|worth\\s+(?:the\\s+)?money|overpriced|expensive|cheap|affordable)\\b",
+      "\\b(price\\s+tag|pricing|msrp|sticker\\s+price|resale\\s+value)\\b",
+      "\\b(cost\\s+of\\s+ownership|maintenance\\s+cost|maintenance\\s+expense)\\b",
+      "\\b(pocket\\s+friendly|budget\\s+friendly|costly)\\b"
+    ]
+  }
+}

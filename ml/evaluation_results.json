@@ -1,0 +1,555 @@
+{
+  "evaluation_split": "test",
+  "total_test_samples": 27,
+  "metrics": {
+    "accuracy": 0.6296,
+    "precision_macro": 0.7697,
+    "recall_macro": 0.6697,
+    "f1_macro": 0.5541,
+    "precision_weighted": 0.8296,
+    "recall_weighted": 0.6296,
+    "f1_weighted": 0.5647
+  },
+  "confusion_matrix": {
+    "labels": [
+      "positive",
+      "neutral",
+      "negative"
+    ],
+    "matrix": [
+      [
+        10,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        8
+      ],
+      [
+        0,
+        0,
+        6
+      ]
+    ],
+    "matrix_normalized": [
+      [
+        0.9091,
+        0.0,
+        0.0909
+      ],
+      [
+        0.1,
+        0.1,
+        0.8
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "positive": {
+      "precision": 0.9091,
+      "recall": 0.9091,
+      "f1_score": 0.9091,
+      "support": 11
+    },
+    "neutral": {
+      "precision": 1.0,
+      "recall": 0.1,
+      "f1_score": 0.1818,
+      "support": 10
+    },
+    "negative": {
+      "precision": 0.4,
+      "recall": 1.0,
+      "f1_score": 0.5714,
+      "support": 6
+    }
+  },
+  "aspect_performance": {
+    "Vehicle": {
+      "test_occurrences": 7,
+      "detection_rate": 0.5714,
+      "sentiment_accuracy": 0.2857
+    },
+    "Engine": {
+      "test_occurrences": 6,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 0.6667
+    },
+    "Battery": {
+      "test_occurrences": 6,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 0.8333
+    },
+    "Mileage": {
+      "test_occurrences": 4,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 1.0
+    },
+    "Safety": {
+      "test_occurrences": 3,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 1.0
+    },
+    "Comfort": {
+      "test_occurrences": 9,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 0.4444
+    },
+    "Service": {
+      "test_occurrences": 7,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 0.8571
+    },
+    "Infotainment": {
+      "test_occurrences": 6,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 1.0
+    },
+    "Price": {
+      "test_occurrences": 7,
+      "detection_rate": 1.0,
+      "sentiment_accuracy": 0.8571
+    }
+  },
+  "sample_evaluations": [
+    {
+      "id": "rev_001",
+      "vehicle_model": "Tesla Model 3",
+      "text": "The battery range is excellent, but the charging time is too long. The infotainment system is easy to use.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Battery": "positive",
+        "Infotainment": "positive"
+      },
+      "predicted_aspects": {
+        "Battery": "negative",
+        "Infotainment": "positive"
+      }
+    },
+    {
+      "id": "rev_002",
+      "vehicle_model": "Ford Mustang GT",
+      "text": "The V8 engine power and acceleration are absolutely thrilling, but the gas mileage is terrible.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Engine": "positive",
+        "Mileage": "negative"
+      },
+      "predicted_aspects": {
+        "Engine": "positive",
+        "Mileage": "negative"
+      }
+    },
+    {
+      "id": "rev_003",
+      "vehicle_model": "Toyota Camry",
+      "text": "Outstanding fuel economy and the comfort of the seats on long highway drives is top notch.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Mileage": "positive",
+        "Comfort": "positive"
+      },
+      "predicted_aspects": {
+        "Mileage": "positive",
+        "Comfort": "positive"
+      }
+    },
+    {
+      "id": "rev_004",
+      "vehicle_model": "Hyundai Ioniq 5",
+      "text": "Fast DC charging speed and the futuristic exterior styling make this vehicle a head-turner.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Battery": "positive",
+        "Vehicle": "positive"
+      },
+      "predicted_aspects": {
+        "Battery": "positive",
+        "Vehicle": "positive"
+      }
+    },
+    {
+      "id": "rev_005",
+      "vehicle_model": "Honda Civic",
+      "text": "The price is very affordable and maintenance costs are low, but road noise in the cabin is annoying.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Price": "positive",
+        "Service": "positive",
+        "Comfort": "negative"
+      },
+      "predicted_aspects": {
+        "Price": "positive",
+        "Service": "neutral",
+        "Comfort": "negative"
+      }
+    },
+    {
+      "id": "rev_006",
+      "vehicle_model": "Volvo XC90",
+      "text": "Top-tier safety features with flawless ADAS lane keeping and excellent emergency braking.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Safety": "positive"
+      },
+      "predicted_aspects": {
+        "Safety": "positive"
+      }
+    },
+    {
+      "id": "rev_007",
+      "vehicle_model": "BMW 3 Series",
+      "text": "The dealership customer service was awful and scheduled maintenance was horribly expensive.",
+      "ground_truth_overall": "negative",
+      "predicted_overall": "negative",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Service": "negative",
+        "Price": "negative"
+      },
+      "predicted_aspects": {
+        "Service": "negative",
+        "Price": "negative"
+      }
+    },
+    {
+      "id": "rev_008",
+      "vehicle_model": "Chevrolet Bolt EV",
+      "text": "Great affordable price for an EV, but the battery degradation over winter is disappointing.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Price": "positive",
+        "Battery": "negative"
+      },
+      "predicted_aspects": {
+        "Price": "positive",
+        "Battery": "negative"
+      }
+    },
+    {
+      "id": "rev_009",
+      "vehicle_model": "Mazda CX-5",
+      "text": "The infotainment touchscreen is laggy and Apple CarPlay disconnects frequently.",
+      "ground_truth_overall": "negative",
+      "predicted_overall": "negative",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Infotainment": "negative"
+      },
+      "predicted_aspects": {
+        "Infotainment": "negative"
+      }
+    },
+    {
+      "id": "rev_010",
+      "vehicle_model": "Mercedes-Benz C-Class",
+      "text": "Plush ride quality and quiet cabin, although the purchase price is quite steep.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Comfort": "positive",
+        "Price": "negative"
+      },
+      "predicted_aspects": {
+        "Comfort": "neutral",
+        "Price": "negative"
+      }
+    },
+    {
+      "id": "rev_019",
+      "vehicle_model": "Hyundai Tucson",
+      "text": "The blind spot monitoring and collision warning gave several false alarms during rain.",
+      "ground_truth_overall": "negative",
+      "predicted_overall": "negative",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Safety": "negative"
+      },
+      "predicted_aspects": {
+        "Safety": "negative"
+      }
+    },
+    {
+      "id": "rev_020",
+      "vehicle_model": "Lexus RX",
+      "text": "Unmatched cabin silence and plush seating comfort. The dealership treated us with great respect.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Comfort": "positive",
+        "Service": "positive"
+      },
+      "predicted_aspects": {
+        "Comfort": "neutral",
+        "Service": "positive"
+      }
+    },
+    {
+      "id": "rev_021",
+      "vehicle_model": "Dodge Charger",
+      "text": "Massive engine torque and aggressive exhaust sound, but it drinks fuel like crazy.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Engine": "positive",
+        "Mileage": "negative"
+      },
+      "predicted_aspects": {
+        "Engine": "neutral",
+        "Mileage": "negative"
+      }
+    },
+    {
+      "id": "rev_022",
+      "vehicle_model": "Genesis GV70",
+      "text": "High-end interior fit and finish, crystal clear sound system, and reasonable pricing for luxury.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Vehicle": "positive",
+        "Infotainment": "positive",
+        "Price": "positive"
+      },
+      "predicted_aspects": {
+        "Infotainment": "positive",
+        "Price": "neutral"
+      }
+    },
+    {
+      "id": "rev_023",
+      "vehicle_model": "Ford F-150 Lightning",
+      "text": "Electric towing power is impressive, but battery range drops drastically when pulling heavy loads.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Engine": "positive",
+        "Battery": "negative"
+      },
+      "predicted_aspects": {
+        "Engine": "positive",
+        "Battery": "negative"
+      }
+    },
+    {
+      "id": "rev_025",
+      "vehicle_model": "Tesla Model Y",
+      "text": "Supercharger network access is seamless, but body panel gaps and paint imperfections are unacceptable.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Battery": "positive",
+        "Vehicle": "negative"
+      },
+      "predicted_aspects": {
+        "Battery": "positive",
+        "Vehicle": "negative"
+      }
+    },
+    {
+      "id": "rev_026",
+      "vehicle_model": "Nissan Rogue",
+      "text": "The CVT gearbox has sluggish acceleration and whines under load. Service department was unhelpful.",
+      "ground_truth_overall": "negative",
+      "predicted_overall": "negative",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Engine": "negative",
+        "Service": "negative"
+      },
+      "predicted_aspects": {
+        "Engine": "negative",
+        "Service": "negative"
+      }
+    },
+    {
+      "id": "rev_028",
+      "vehicle_model": "BMW i4",
+      "text": "Curved display infotainment is crisp and responsive, but rear seat legroom is very cramped.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "neutral",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Infotainment": "positive",
+        "Comfort": "negative"
+      },
+      "predicted_aspects": {
+        "Infotainment": "positive",
+        "Comfort": "negative"
+      }
+    },
+    {
+      "id": "rev_029",
+      "vehicle_model": "Toyota Prius",
+      "text": "Spectacular gas mileage of over 55 mpg and very affordable MSRP for daily commuting.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Mileage": "positive",
+        "Price": "positive"
+      },
+      "predicted_aspects": {
+        "Mileage": "positive",
+        "Price": "positive"
+      }
+    },
+    {
+      "id": "rev_030",
+      "vehicle_model": "Alfa Romeo Giulia",
+      "text": "Stunning Italian styling and agile handling, but frequent mechanical repairs and poor dealer warranty support.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Vehicle": "positive",
+        "Service": "negative"
+      },
+      "predicted_aspects": {
+        "Vehicle": "negative",
+        "Service": "negative"
+      }
+    },
+    {
+      "id": "rev_032",
+      "vehicle_model": "Polestar 2",
+      "text": "Google built-in navigation is superb, though the firm suspension transmits every road bump.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "positive",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Infotainment": "positive",
+        "Comfort": "negative"
+      },
+      "predicted_aspects": {
+        "Infotainment": "positive",
+        "Comfort": "neutral"
+      }
+    },
+    {
+      "id": "rev_033",
+      "vehicle_model": "Mazda 3",
+      "text": "Superb fit and finish with quiet cabin ergonomics, and the price tag feels like a bargain.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Vehicle": "positive",
+        "Comfort": "positive",
+        "Price": "positive"
+      },
+      "predicted_aspects": {
+        "Comfort": "neutral",
+        "Price": "positive"
+      }
+    },
+    {
+      "id": "rev_034",
+      "vehicle_model": "Mitsubishi Mirage",
+      "text": "Underpowered 3-cylinder engine, cheap plastic interior, and noisy cabin on the highway.",
+      "ground_truth_overall": "negative",
+      "predicted_overall": "negative",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Engine": "negative",
+        "Vehicle": "negative",
+        "Comfort": "negative"
+      },
+      "predicted_aspects": {
+        "Engine": "negative",
+        "Price": "negative",
+        "Comfort": "neutral"
+      }
+    },
+    {
+      "id": "rev_035",
+      "vehicle_model": "Acura MDX",
+      "text": "Great safety assist features and reliable airbags, plus the dealer service center was prompt.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Safety": "positive",
+        "Service": "positive"
+      },
+      "predicted_aspects": {
+        "Safety": "positive",
+        "Service": "positive"
+      }
+    },
+    {
+      "id": "rev_037",
+      "vehicle_model": "Ram 1500",
+      "text": "Air suspension delivers velvety ride quality and the Uconnect touchscreen is fast and intuitive.",
+      "ground_truth_overall": "positive",
+      "predicted_overall": "positive",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Comfort": "positive",
+        "Infotainment": "positive"
+      },
+      "predicted_aspects": {
+        "Comfort": "positive",
+        "Infotainment": "positive"
+      }
+    },
+    {
+      "id": "rev_039",
+      "vehicle_model": "Mini Cooper SE",
+      "text": "Fun go-kart handling and sharp exterior looks, but 110-mile EV battery range is too short.",
+      "ground_truth_overall": "neutral",
+      "predicted_overall": "negative",
+      "is_correct": false,
+      "ground_truth_aspects": {
+        "Vehicle": "positive",
+        "Battery": "negative"
+      },
+      "predicted_aspects": {
+        "Vehicle": "neutral",
+        "Battery": "negative"
+      }
+    },
+    {
+      "id": "rev_040",
+      "vehicle_model": "Ford Explorer",
+      "text": "Multiple recalls for transmission issues and frustrating customer service at the local dealership.",
+      "ground_truth_overall": "negative",
+      "predicted_overall": "negative",
+      "is_correct": true,
+      "ground_truth_aspects": {
+        "Engine": "negative",
+        "Service": "negative"
+      },
+      "predicted_aspects": {
+        "Engine": "neutral",
+        "Service": "negative"
+      }
+    }
+  ]
+}

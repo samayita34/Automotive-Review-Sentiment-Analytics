@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+    background-color: #000000;
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+.mono-card {
+  background-color: #0A0A0A;
+  border: 1px solid #262626;
+  border-radius: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.mono-card:hover {
+  border-color: #404040;
+}
+
+.mono-input {
+  background-color: #050505;
+  border: 1px solid #262626;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.mono-input:focus {
+  outline: none;
+  border-color: #737373;
+}
+
+.mono-btn {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.mono-btn:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+}
+
+.mono-btn-primary {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #FFFFFF;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.mono-btn-primary:hover {
+  background-color: #E5E5E5;
+  border-color: #E5E5E5;
+}
